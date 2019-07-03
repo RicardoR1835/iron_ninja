@@ -1,0 +1,11 @@
+/Users/ricardorivera/cSharp/iron_ninja/bin/Debug/netcoreapp2.1/iron_ninja.deps.json
+/Users/ricardorivera/cSharp/iron_ninja/bin/Debug/netcoreapp2.1/iron_ninja.runtimeconfig.json
+/Users/ricardorivera/cSharp/iron_ninja/bin/Debug/netcoreapp2.1/iron_ninja.runtimeconfig.dev.json
+/Users/ricardorivera/cSharp/iron_ninja/bin/Debug/netcoreapp2.1/iron_ninja.dll
+/Users/ricardorivera/cSharp/iron_ninja/bin/Debug/netcoreapp2.1/iron_ninja.pdb
+/Users/ricardorivera/cSharp/iron_ninja/obj/Debug/netcoreapp2.1/iron_ninja.csprojAssemblyReference.cache
+/Users/ricardorivera/cSharp/iron_ninja/obj/Debug/netcoreapp2.1/iron_ninja.csproj.CoreCompileInputs.cache
+/Users/ricardorivera/cSharp/iron_ninja/obj/Debug/netcoreapp2.1/iron_ninja.AssemblyInfoInputs.cache
+/Users/ricardorivera/cSharp/iron_ninja/obj/Debug/netcoreapp2.1/iron_ninja.AssemblyInfo.cs
+/Users/ricardorivera/cSharp/iron_ninja/obj/Debug/netcoreapp2.1/iron_ninja.dll
+/Users/ricardorivera/cSharp/iron_ninja/obj/Debug/netcoreapp2.1/iron_ninja.pdb
