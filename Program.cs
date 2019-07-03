@@ -3,93 +3,8 @@ using System.Collections.Generic;
 
 namespace iron_ninja
 {
-   interface IConsumable
-    {
-        string Name {get;set;}
-        int Calories {get;set;}
-        bool IsSpicy {get;set;}
-        bool IsSweet {get;set;}
-        string GetInfo();
-    } 
-    class Food : IConsumable
-    {
-        public string Name {get;set;}
-        public int Calories {get;set;}
-        public bool IsSpicy {get;set;}
-        public bool IsSweet {get;set;}
-        public string GetInfo()
-        {
-            return $"{Name} (Food).  Calories: {Calories}.  Spicy?: {IsSpicy}, Sweet?: {IsSweet}";
-        }
-        public Food(string name, int cals, bool spice, bool sweets){
-            Name = name;
-            Calories = cals;
-            IsSpicy = spice;
-            IsSweet = sweets;
-        }
-    }
-
-    class Drink : IConsumable
-    {
-        public string Name {get;set;}
-        public int Calories {get;set;}
-        public bool IsSpicy {get;set;}
-        public bool IsSweet {get;set;}
-        
-        public string GetInfo()
-        {
-            return $"{Name} (Food).  Calories: {Calories}.  Spicy?: {IsSpicy}, Sweet?: {IsSweet}";
-        }
-
-        public Drink(string name, int cals, bool spice, bool sweets){
-            Name = name;
-            Calories = cals;
-            IsSpicy = spice;
-            IsSweet = sweets;
-        }
-    } 
-    class Buffet
-    {
-        public List<IConsumable> Menu;
-        
-        //constructor
-        public Buffet()
-        {
-            Menu = new List<IConsumable>()
-            {
-                new Food("Burrito", 1000, true, false),
-                new Food("Pasghetti", 1200, true, true),
-                new Food("Icecream Sundae", 1000, false, true),
-                new Food("Sammich", 2000, true, true),
-                new Food("Hot Cheeto tacos", 1000, true, false),
-                new Food("Sushi", 1000, true, false),
-                new Food("Crazy noodles", 1000, false, true),
-            };
-        }
-        public IConsumable Serve()
-        {
-            Random rand = new Random();
-            int x = rand.Next(Menu.Count);
-            return Menu[x];
-        }
-    }
-    abstract class Ninja
-    {
-        protected int calorieIntake;
-        public List<IConsumable> ConsumptionHistory;
-        
-        
-        public Ninja()
-        {
-            calorieIntake = 0;
-            ConsumptionHistory = new List<IConsumable>();
-        }
-        
-        
-        public abstract bool isFull {get;}
-        
-        public abstract void Consume(IConsumable item);
-    }
+   
+    
 
     class SweetTooth : Ninja
     {
@@ -157,10 +72,17 @@ namespace iron_ninja
             SpiceHound rick = new SpiceHound();
             SweetTooth dave = new SweetTooth();
             dave.Consume(x);
+            dave.Consume(x);
             rick.Consume(x);
-            dave.Consume(y);
             rick.Consume(y);
-        
+            rick.Consume(z);
+            Console.WriteLine(rick.ConsumptionHistory.Count);
+            Console.WriteLine(dave.ConsumptionHistory.Count);
+            if(rick.ConsumptionHistory.Count > dave.ConsumptionHistory.Count){
+                Console.WriteLine("Rick ate more thangs");
+            } else{
+                Console.WriteLine("Dave is the man i guess");
+            }
         }
     }
 }
